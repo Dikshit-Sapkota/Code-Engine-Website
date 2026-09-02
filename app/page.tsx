@@ -21,6 +21,7 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
@@ -1086,7 +1087,7 @@ export default function Home() {
     </div>
 
     <p>
-      © {new Date().getFullYear()} Code Engine Pvt Ltd
+      © {new Date().getFullYear()} <Link href={'codeengine.com.np'}> Code Engine Pvt Ltd. </Link>
       All rights reserved.
     </p>
   </div>
