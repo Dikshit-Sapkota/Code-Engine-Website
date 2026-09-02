@@ -1086,7 +1086,7 @@ export default function Home() {
     </div>
 
     <p>
-      © {new Date().getFullYear()} Code Engine Pvt Ltd.
+      © {new Date().getFullYear()} Code Engine Pvt Ltd
       All rights reserved.
     </p>
   </div>
