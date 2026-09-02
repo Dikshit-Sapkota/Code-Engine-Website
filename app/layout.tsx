@@ -1,42 +1,36 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
-
-const display = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const mono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
-  display: "swap",
-});
-
-const body = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-body",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Code Engine — Software Engineering Studio, Kathmandu",
+  title: "Code Engine Pvt Ltd | Software Engineering Studio",
   description:
-    "Code Engine designs and builds full-stack products on Java Spring Boot, the MERN stack, and WordPress — backend systems that hold up under load, and websites that bring customers in.",
+    "Code Engine is a software engineering studio in Kathmandu building Spring Boot, MERN and WordPress solutions.",
+  keywords: [
+    "Code Engine",
+    "software company Kathmandu",
+    "software development Nepal",
+    "Spring Boot development",
+    "MERN development",
+    "WordPress development",
+    "web development Nepal"
+  ],
+  authors: [{ name: "Code Engine Pvt Ltd" }],
+  openGraph: {
+    title: "Code Engine Pvt Ltd",
+    description:
+      "Software, engineered to run. Full-stack software development from Kathmandu.",
+    type: "website",
+    locale: "en_US"
+  }
 };
 
 export default function RootLayout({
-  children,
-}: {
+  children
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className={`${display.variable} ${mono.variable} ${body.variable}`}>
-      <body className="font-body antialiased">{children}</body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }
